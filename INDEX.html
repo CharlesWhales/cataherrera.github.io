@@ -1,13 +1,22 @@
+<!doctype html>
+<html>
 <head>
-  <script src="http://d3js.org/d3.v3.min.js"></script>
-  <script src="http://dimplejs.org/dist/dimple.v2.1.2.min.js"></script>
+  <meta charset="utf-8" />
+  <link href="estilo.css" rel="stylesheet" />
+  <title>Turismo</title>
 </head>
 <body>
-  <script type="text/javascript">
- var chart = new dimple.chart(svg, data);
-chart.addCategoryAxis("x", "Region");
-chart.addMeasureAxis("y", "Volume");
-chart.addSeries("Brand", dimple.plot.bar);
-chart.draw();
-  </script>
+    <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="2011.html" title="2011">2011</a></li>
+        <li><a href="2012.html" title="2012">2012</a></li>
+        <li><a href="2013.html" title="2013">2013</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+  <img id= "imagen" src="mapa.jpg" alt="Mapa"/>
+  </section>
 </body>
+</html>
