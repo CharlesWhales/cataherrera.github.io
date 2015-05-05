@@ -1,0 +1,13 @@
+<head>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://dimplejs.org/dist/dimple.v2.1.2.min.js"></script>
+</head>
+<body>
+  <script type="text/javascript">
+ var chart = new dimple.chart(svg, data);
+chart.addCategoryAxis("x", "Region");
+chart.addMeasureAxis("y", "Volume");
+chart.addSeries("Brand", dimple.plot.bar);
+chart.draw();
+  </script>
+</body>
