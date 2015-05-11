@@ -61,8 +61,8 @@
 
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.expsigned_in=true"></script>
-    <script type="text/javascript" src="coordenadas.js"></script>
-    <script type="text/javascript">
+    <script type="text/javascript" src="cordenadas_sudamerica.js"></script>
+    <script>
 // This example adds an animated symbol to a polyline.
 
 var line;
@@ -70,9 +70,10 @@ var lineArray=[];
 
 function initialize() {
   var mapOptions = {
-    center: new google.maps.LatLng(58.4134304,-75.283542),
-    zoom:2.8,
+    center: new google.maps.LatLng(-3.042070, -54.903894),//-24.785868,-59.474207
+    zoom:4.1,
     minZoom:2.8,
+    maxZoom:8,
     streetViewControl:false,
     panControl:false,
     overviewMapControl:false,
@@ -86,9 +87,9 @@ function initialize() {
 
   var lineCoordinatesArray = [];
 
-  for (var i = coordenadas.length - 1; i >= 0; i--) {
+  for (var i = cordenadas_sudamerica.length - 1; i >= 0; i--) {
     lineCoordinatesArray[i] = [
-      new google.maps.LatLng(coordenadas[i][0],coordenadas[i][1]),new google.maps.LatLng(coordenadas[i][2],coordenadas[i][3])
+      new google.maps.LatLng(cordenadas_sudamerica[i][0],cordenadas_sudamerica[i][1],true),new google.maps.LatLng(cordenadas_sudamerica[i][2],cordenadas_sudamerica[i][3],true)
       
     ];
     
@@ -116,7 +117,7 @@ function initialize() {
     lineArray[i] = new google.maps.Polyline({
         path: lineCoordinatesArray[i],
         strokeColor: '#4A4A4A',
-        strokeWeight:2.8,
+        strokeWeight:2,
         strokeOpacity:0.4,
         geodesic:true,
         icons: [
@@ -133,7 +134,7 @@ function initialize() {
           {
             icon: {
               path: google.maps.SymbolPath.CIRCLE,
-              scale: coordenadas[i][4]*2,
+              scale: cordenadas_sudamerica[i][4]*0.9,
               fillOpacity:1,
               strokeOpacity:1,
               strokeColor: '#EB4E4E',
@@ -144,7 +145,7 @@ function initialize() {
           {
             icon: {
               path: google.maps.SymbolPath.CIRCLE,
-              scale: coordenadas[i][5]*2,
+              scale: cordenadas_sudamerica[i][5]*0.9,
               fillOpacity:1,
               strokeOpacity:1,
               fillColor:'#E8A434',
@@ -179,7 +180,7 @@ function initialize() {
 function animateCircle() {
     var countArray = [];
     var iconsArray = [];
-    for (var i = coordenadas.length - 1; i >= 0; i--) {
+    for (var i = cordenadas_sudamerica.length - 1; i >= 0; i--) {
       countArray[i]=0;
     };
     // count = 0;
@@ -187,7 +188,7 @@ function animateCircle() {
       // count = (count + 5) % 200;
       // var icons = line.get('icons');
       // icons[0].offset = (count / 2) + '%';
-      for (var i = coordenadas.length - 1; i >= 0; i--) {
+      for (var i = cordenadas_sudamerica.length - 1; i >= 0; i--) {
         countArray[i] = (countArray[i] + 0.3 ) % 200;
         iconsArray[i] = lineArray[i].get('icons');
         iconsArray[i][0].offset = (countArray[i] / 2) + '%';
