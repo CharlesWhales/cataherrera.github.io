@@ -6,6 +6,9 @@
     <link href='http://fonts.googleapis.com/css?family=Orienta' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
     <title>Sudamerica</title>
     <style>
       html, body, #map-canvas {
@@ -62,6 +65,8 @@
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.expsigned_in=true"></script>
     <script type="text/javascript" src="cordenadas_sudamerica.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="script.js"></script>
     <script>
 // This example adds an animated symbol to a polyline.
 
@@ -213,7 +218,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
     </header>
     <section>
     <p class="explicacion">Los circulo en el mapa represetan por su tamaño la relacion de la cantidad de personas que viajan desde el pais de origen por la  poblacion total de ese pais<p>  
-    <nav class="navbar">
+    <div id='cssmenu'>
       <ul>
         <li><a href="index.html" title="Mundo">Mundo</a></li>
         <li><a href="sudamerica.html" title="sudamerica hola">Sudamerica</a></li>
@@ -222,7 +227,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
         <li><a href="africa.html" title="Cursos">Africa y Asia</a></li>
         <li><a href="oceania.html" title="Cursos">Oceania y Asia</a></li>
       </ul>
-    </nav> 
+    </div> 
     </section>
     <div class="mapa" id="map-canvas"></div>
     <footer> Los datos utilizados para hacer este grafico son del año 2011 y la formula utlizada para el tamaño de los circulos es ((personas que viajan/poblacion total)*500+1)*0,9
