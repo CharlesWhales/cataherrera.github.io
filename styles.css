@@ -31,7 +31,7 @@
 }
 #cssmenu {
   width: auto;
-  border: 3px solid #fd8a17;
+  border: 3px solid #E8A434;
   border-radius: 3px;
   font-family: 'Oswald', sans-serif;
   line-height: 1;
@@ -60,7 +60,7 @@
   font-size: 14px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #fd8a17;
+  color: #E8A434;
   -webkit-transition: all .2s ease;
   -moz-transition: all .2s ease;
   -ms-transition: all .2s ease;
@@ -79,7 +79,7 @@
   height: 0;
   width: 0;
   border: 5px solid transparent;
-  border-bottom-color: #fd8a17;
+  border-bottom-color: #E8A434;
   -webkit-transition: all 0.25s ease-out;
   -moz-transition: all 0.25s ease-out;
   -ms-transition: all 0.25s ease-out;
@@ -114,7 +114,7 @@
   font-size: 14px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #fd8a17;
+  color: #EB4E4E;
   background: url('images/bg.png');
 }
 #cssmenu.small-screen #menu-button.menu-opened {
@@ -129,8 +129,8 @@
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  border-top: 2px solid #fd8a17;
-  border-bottom: 2px solid #fd8a17;
+  border-top: 2px solid #E8A434;
+  border-bottom: 2px solid #E8A434;
   width: 18px;
   height: 3px;
 }
@@ -146,7 +146,7 @@
   display: block;
   width: 18px;
   height: 2px;
-  background: #fd8a17;
+  background: #E8A434;
 }
 #cssmenu.small-screen #menu-button.menu-opened:before {
   background: #444444;
