@@ -61,7 +61,7 @@
 
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.expsigned_in=true"></script>
-    <script type="text/javascript" src="cordenadas_europa.js"></script>
+    <script type="text/javascript" src="cordenadas_africa.js"></script>
     <script>
 // This example adds an animated symbol to a polyline.
 
@@ -70,7 +70,7 @@ var lineArray=[];
 
 function initialize() {
   var mapOptions = {
-    center: new google.maps.LatLng(15.4134304,-5.283542),
+    center: new google.maps.LatLng(5.4134304,12.283542),
     zoom:3,
     minZoom:2.8,
     maxZoom:8,
@@ -87,9 +87,9 @@ function initialize() {
 
   var lineCoordinatesArray = [];
 
-  for (var i = cordenadas_europa.length - 1; i >= 0; i--) {
+  for (var i = cordenadas_africa.length - 1; i >= 0; i--) {
     lineCoordinatesArray[i] = [
-      new google.maps.LatLng(cordenadas_europa[i][0],cordenadas_europa[i][1],true),new google.maps.LatLng(cordenadas_europa[i][2],cordenadas_europa[i][3],true)
+      new google.maps.LatLng(cordenadas_africa[i][0],cordenadas_africa[i][1],true),new google.maps.LatLng(cordenadas_africa[i][2],cordenadas_africa[i][3],true)
       
     ];
     
@@ -109,7 +109,7 @@ function initialize() {
           {
             icon: {
               path: google.maps.SymbolPath.CIRCLE,
-              scale: cordenadas_europa[i][4]*3,
+              scale: cordenadas_africa[i][4]*5,
               fillOpacity:1,
               strokeOpacity:1,
               strokeColor: '#EB4E4E',
@@ -120,7 +120,7 @@ function initialize() {
           {
             icon: {
               path: google.maps.SymbolPath.CIRCLE,
-              scale: cordenadas_europa[i][5]*3,
+              scale: cordenadas_africa[i][5]*5,
               fillOpacity:1,
               strokeOpacity:1,
               fillColor:'#E8A434',
@@ -143,11 +143,11 @@ function initialize() {
 function animateCircle() {
     var countArray = [];
     var iconsArray = [];
-    for (var i = cordenadas_europa.length - 1; i >= 0; i--) {
+    for (var i = cordenadas_africa.length - 1; i >= 0; i--) {
       countArray[i]=0;
     };
      window.setInterval(function() {
-      for (var i = cordenadas_europa.length - 1; i >= 0; i--) {
+      for (var i = cordenadas_africa.length - 1; i >= 0; i--) {
         countArray[i] = (countArray[i] + 0.3 ) % 200;
         iconsArray[i] = lineArray[i].get('icons');
         iconsArray[i][0].offset = (countArray[i] / 2) + '%';
